@@ -5,23 +5,19 @@ function renderNavbar() {
         <div class="nav-container">
             <div class="nav-brand">
                 <img src="/assets/images/aau-logo.png" alt="AAU Space Robotics Logo" class="nav-logo-img">
-                <a href="/" class="nav-logo-text">AAU Space Robotics</a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="/" class="nav-link">Home</a>
+                    <a href="/project" class="nav-link nav-button">Project</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/project" class="nav-link">Project</a>
+                    <a href="/sponsors" class="nav-link nav-button">Sponsors</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/sponsors" class="nav-link">Sponsors</a>
+                    <a href="/our-team" class="nav-link nav-button">Our Team</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/our-team" class="nav-link">Our Team</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact" class="nav-link">Contact</a>
+                    <a href="/contact" class="nav-link nav-button">Contact</a>
                 </li>
                 <li class="nav-item social-links">
                     <a href="https://www.facebook.com/profile.php?id=100091889017917" target="_blank" class="social-link">
