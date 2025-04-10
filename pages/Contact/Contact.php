@@ -1,14 +1,16 @@
 <?php
 require_once __DIR__ . '/../../app/components/Layout/Layout.php';
-require_once __DIR__ . '/../../app/components/PageTitle/PageTitle.php';
 
 function renderContactPage() {
     $content = '
-    ' . renderPageTitle('Contact Us', 'Get in touch with our team') . '
-    <div class="contact-content">
-        <!-- Contact content here -->
+    <div class="page-container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="main-title">Contact Us</h1>
+                <h2 class="subtitle">Get in touch with our team</h2>
+            </div>
+        </div>
     </div>
-    <link rel="stylesheet" href="/app/components/PageTitle/PageTitle.css">
     <link rel="stylesheet" href="/pages/Contact/Contact.css">
     ';
     
