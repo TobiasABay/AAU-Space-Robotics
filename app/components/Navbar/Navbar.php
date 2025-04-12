@@ -17,8 +17,14 @@ function renderNavbar() {
 
             <div class="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="/project" class="nav-link nav-button">Project</a>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link nav-button">Project <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/project/overview" class="dropdown-item">Overview</a></li>
+                            <li><a href="/project/objectives" class="dropdown-item">Objectives</a></li>
+                            <li><a href="/project/timeline" class="dropdown-item">Timeline</a></li>
+                            <li><a href="/project/achievements" class="dropdown-item">Achievements</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="/sponsors" class="nav-link nav-button">Sponsors</a>
@@ -46,6 +52,8 @@ function renderNavbar() {
             const burgerMenu = document.querySelector(".burger-menu");
             const navMenu = document.querySelector(".nav-menu");
             const burgerIcon = document.querySelector(".burger-icon");
+            const dropdown = document.querySelector(".dropdown");
+            const dropdownButton = document.querySelector(".dropdown .nav-button");
             
             burgerMenu.addEventListener("click", function() {
                 navMenu.classList.toggle("active");
@@ -59,6 +67,32 @@ function renderNavbar() {
                     burgerIcon.classList.remove("active");
                 }
             });
+
+            // Dropdown functionality
+            if (dropdown) {
+                let isDropdownOpen = false;
+
+                dropdownButton.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    isDropdownOpen = !isDropdownOpen;
+                    const dropdownMenu = this.parentElement.querySelector(".dropdown-menu");
+                    const arrow = this.querySelector(".dropdown-arrow");
+                    
+                    dropdownMenu.classList.toggle("active");
+                    arrow.style.transform = isDropdownOpen ? "rotate(180deg)" : "rotate(0deg)";
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener("click", function(event) {
+                    if (!dropdown.contains(event.target)) {
+                        const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+                        const arrow = dropdown.querySelector(".dropdown-arrow");
+                        dropdownMenu.classList.remove("active");
+                        arrow.style.transform = "rotate(0deg)";
+                        isDropdownOpen = false;
+                    }
+                });
+            }
         });
     </script>';
 }
