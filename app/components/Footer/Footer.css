@@ -119,6 +119,22 @@
     font-size: 0.9rem;
 }
 
+.footer-developed-by {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.footer-developed-by a {
+    color: #d0e0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-developed-by a:hover {
+    color: #ffffff9e;
+    text-decoration: underline;
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
     .footer-content {

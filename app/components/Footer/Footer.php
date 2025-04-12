@@ -37,6 +37,7 @@ function renderFooter() {
         </div>
         <div class="footer-bottom">
             <p>&copy; <?php echo date("Y"); ?> AAU Space Robotics. All rights reserved.</p>
+            <p class="footer-developed-by">Developed by <a href="https://github.com/TobiasABay/AAU-Space-Robotics" target="_blank">Tobias Agerskov Bay</a></p>
         </div>
     </footer>';
 }
