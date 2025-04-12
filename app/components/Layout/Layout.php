@@ -15,8 +15,14 @@ function renderLayout($content, $title = 'AAU Space Robotics') {
         <link rel="stylesheet" href="/app/components/Footer/Footer.css">
         <link rel="stylesheet" href="/app/styles/pages.css">
         <style>
-            body {
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
                 min-height: 100vh;
+                background-color: #d9d9d9;
+            }
+            body {
                 display: flex;
                 flex-direction: column;
             }
@@ -34,4 +40,4 @@ function renderLayout($content, $title = 'AAU Space Robotics') {
     </body>
     </html>';
 }
-?> 
+?>
