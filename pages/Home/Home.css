@@ -110,3 +110,8 @@ body {
     color: #333;
     line-height: 1.6;
 } 
+
+.carousel-section {
+    margin: 4rem 0;
+    padding: 2rem 0;
+} 
